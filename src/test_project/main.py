@@ -1,12 +1,9 @@
-from tests.test_primes import primes
-from tests.test_checksum import checksum
+from pipeline import generate_and_process_primes
 
-def pipeline(N: int) -> int:
-    prime_numbers = primes(N)  
-    result = checksum(prime_numbers)  
-    return result
+def main():
+    test_list = [1, 2, 6, 24]
+    result = checksum(test_list)
+    print(f"Контрольная сумма для {test_list}: {result}")
 
 if __name__ == "__main__":
-    N = 1000  
-    result = pipeline(N) 
-    print(f"Контрольная сумма простых чисел до {N}: {result}")  
+    main()

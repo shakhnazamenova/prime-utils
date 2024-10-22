@@ -1,8 +1,9 @@
-def checksum(lst: list[int]) -> int:
-    control_sum = 0
+import pytest
+from src.test_project.pipeline import checksum
 
-    for element in lst:
-        control_sum+=element
-        control_sum = (control_sum * 113) % 10000007
-        
-    return control_sum
+def test_checksum_empty():
+    assert checksum([]) == 0  
+def test_checksum_single_element():
+    assert checksum([1]) == 113  
+def test_checksum_example():
+    assert checksum([1, 2, 6, 24]) == 6012369  

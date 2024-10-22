@@ -1,23 +1,8 @@
-import random
-from .test_is_prime import is_prime
+import pytest
+from src.test_project.pipeline import primes
 
-def primes(M: int) -> list[int]:
-    result = [2, 3]
-    maxn = M // 6
-    n = 1
-    while n <= maxn:
-        a = 6 * n - 1
-        if is_prime(a):
-            result.append(a)
-        b = 6 * n + 1
-        if b >= M:
-            break
-        else:
-            if is_prime(b):
-                result.append(b)
-        n += 1
-    return result
-
-random.seed(100)
-prime_numbers = primes(1000)
-random.shuffle(prime_numbers)
+def test_primes():
+    assert len(primes(10)) == 10 
+    assert primes(10) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]  
+    assert primes(0) == []  
+    assert primes(1) == [2]  

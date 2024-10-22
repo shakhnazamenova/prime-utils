@@ -1,7 +1,7 @@
-from .test_primes import primes
-from .test_checksum import checksum
+import pytest
+from src.test_project.pipeline import primes, checksum
 
 def pipeline(N: int) -> int:
-    prime_numbers = primes(N)  
+    prime_numbers = primes(N)  #
     result = checksum(prime_numbers)  
-    return result
+    return result  
