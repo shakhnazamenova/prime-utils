@@ -26,14 +26,8 @@ def checksum(lst: List[int]) -> int:
     return control_sum
 
 def generate_and_process_primes() -> int:
-    # Генерация 1000 первых простых чисел
     prime_numbers = primes(1000)
-    
-    # Перемешивание списка
-    random.seed(100)  # Устанавливаем начальное значение генератора случайных чисел
+    random.seed(100)  
     random.shuffle(prime_numbers)
-
-    # Вычисление контрольной суммы
     result = checksum(prime_numbers)
-
     return result
