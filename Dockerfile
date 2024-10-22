@@ -8,4 +8,5 @@ RUN pip install pdm
 
 RUN pdm install
 
-CMD ["python3", "src/test_project/main.py"]
+CMD ["pytest", "tests"]
+
