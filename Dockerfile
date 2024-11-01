@@ -8,5 +8,4 @@ RUN pip install pdm
 
 RUN pdm install
 
-CMD ["pytest", "tests"]
-
+CMD ["python", "src/test_project/prime_functions.py", "1", "1"]
