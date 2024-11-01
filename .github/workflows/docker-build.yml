@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # Запуск на каждом пуше в ветку main
+      - main  
 
 jobs:
   build:
