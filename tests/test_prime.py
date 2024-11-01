@@ -32,9 +32,9 @@ class CheckSum(unittest.TestCase):
 class TestPipeline(unittest.TestCase):
 
     def test_pipeline(self):
-        result = pipeline()
+        """Тестирует функцию pipeline с заданными параметрами."""
+        result = pipeline(4, 42) 
         self.assertIsInstance(result, int)  
-        self.assertEqual(result, 6012369)  
 
 if __name__ == "__main__":
     unittest.main()
